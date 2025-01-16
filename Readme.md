@@ -15,3 +15,35 @@ Interleukin-6 (IL-6) is a critical cytokine involved in immune regulation, infla
 | Training data      |   2685             |          292            |2393                     |
 | Validation data       |    671         |                    73    |     598                 |
 | RAG database   |          9892  |                     513   |                 9379     |
+
+## Quick Prediction <a name="colab"></a>
+[<img src="https://colab.research.google.com/assets/colab-badge.svg">](https://drive.google.com/file/d/1lr0dg4pjMytmZqUhW2GlY7NNtTXWRtBu/view?usp=sharing)<br>
+https://drive.google.com/file/d/1lr0dg4pjMytmZqUhW2GlY7NNtTXWRtBu/view?usp=sharing
+
+### Step 1: Environment Setup
+open the link of colab notebook and change the runtime type to a device other than CPU.
+
+### Step 2: Excute the program
+This Colab notebook will automatically import all necessary dependencies and download the required files.
+
+### Step 3: Submit your fasta file and wait for the Prediction result !
+
+Upload your own FASTA file to run the prediction.
+The format of the FASTA file will be as follows:
+```bash
+>neg_99
+KAAVAAAASVPAADK
+>pos_18
+PQTQQPQQPFPQPQ
+>pos_19
+AEVDCSRFPNATDK
+```
+(Alternatively, you may use our testing dataset. [⬇️link](https://github.com/B1607/RAG_MCNNIL6)<br>
+The result will be formatted as follows:
+```bash
+>neg_99 [X]
+>pos_18 [O]
+>pos_19 [O]
+```
+O indicates the amino acid is predicted to a Interleukin-6 peptides.<br>
+X indicates the amino acid is predicted to not a Interleukin-6 peptides.
